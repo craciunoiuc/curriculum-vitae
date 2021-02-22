@@ -1,0 +1,172 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage[]{geometry}
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+	\addtolength{\oddsidemargin}{-.875in}
+	\addtolength{\evensidemargin}{-.875in}
+	\addtolength{\textwidth}{1.75in}
+
+	\addtolength{\topmargin}{-.675in}
+	\addtolength{\textheight}{1.75in}
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\LARGE {Cezar \textsc{Cr\~{a}ciunoiu}}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Information}
+
+\begin{tabular}{rl}
+    \textsc{Address:}   & Oituz 9, 200494, Craiova, Romania \\
+    \textsc{Phone:}     & (+40) 733 977 745\\
+    \textsc{email:}     & \href{mailto:cezar.craciunoiu@gmail.com}{cezar.craciunoiu@gmail.com}
+\end{tabular}
+
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+\textsc{Sept.} 2017-\textsc{Present}& Bachelor's Degree in \textsc{Computer Science}, GPA: 3.67/4 \scriptsize{as of now}\\&
+\normalsize\textbf{Politehnica University of Bucharest}, Bucharest (Romania)\\&
+\footnotesize{Notable Courses: Data Structures, Network Protocols, OOP,
+				 Algorithm Design, Parallel Programming} \\& \footnotesize{Computer Graphics, Programming Paradigms,
+				 Operating Systems, Computer Architecture}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+	\begin{tabular}{r|p{11cm}}
+	
+		 \textsc{Aug. 2020} & Performance Testing Engineer Intern at \textsc{Endava}, Bucharest \\
+		\textsc{Jul. 2020}&\emph{Graduates 2020 Internship Programme}\\&
+		\footnotesize{Participated in a month long training programme. Learned about and applied different testing techniques.
+			Understood software development \& testing phases in an agile enviroment. Worked in the last week on a company project.}
+		\\\multicolumn{2}{c}{} \\
+		
+		\textsc{Aug. 2020} & Undergraduate teaching assistant at \textsc{UPB}, Bucharest \\
+		\textsc{Sept. 2019}&\emph{Introduction to computer architecture \& Assembly Language}\\&
+		\footnotesize{Helped in the creation of tests given to students across the semester. Participated in the grading of the aforementioned tests.
+			Took the role of invigilator during the final exam. Coordinated with the team leader to deliver results.}
+		\\\multicolumn{2}{c}{} \\
+	
+	\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Projects}
+	\begin{flushleft}
+		\textbf{Unikraft Memory Ballooning - C open-source project}
+	\end{flushleft}
+	\begin{tabular}{ll}
+		\textbullet\enspace\enspace Picked up existing patches to the unikernel to finish the development of a memory managing driver
+				\\\enspace\enspace\enspace between a host OS and it's guest VMs. The driver was implemented on two different platforms.\\
+		\textbullet\enspace\enspace Understood how the Linux kernel patch submission system works and submitted
+										\href{https://patchwork.unikraft.org/project/unikraft/list/?series=1532}{patches} for review.\\
+		\textbullet\enspace\enspace Earned a valuable insight into Linux kernel-space programming and virtualization.\\
+	\end{tabular}
+
+	\begin{flushleft}
+		\textbf{Parallel Image Filters - C++ team project}
+	\end{flushleft}
+	\begin{tabular}{ll}
+		\textbullet\enspace\enspace Implemented 10 different PNG image filters through 3 different parallelization methods.\\
+		\textbullet\enspace\enspace Understood how the Canny edge detector works and its implementation.\\
+		\textbullet\enspace\enspace Earned a good understanding in parallelization performance analysis \& optimization.\\
+		\textbullet\enspace\enspace Further developed project structuring skills using the \href{https://github.com/craciunoiuc/parallel-architectures}{Git versioning system}.\\
+	\end{tabular}
+
+	\begin{flushleft}
+	\textbf{Other notable projects:} 
+		\href{https://github.com/craciunoiuc/Halite-III}{Halite III},
+		\href{https://github.com/craciunoiuc/computer-graphics-2}{3D Ray Tracing},
+		\href{https://github.com/craciunoiuc/network-protocols/tree/master/Client%20-%20Server}{Client-Server IM},
+		\href{https://github.com/craciunoiuc/computer-graphics/tree/master/Source/Teme/Flying%203D%20Plane}{Flying 3D Plane},
+		\href{https://github.com/craciunoiuc/operating-systems/tree/master/1-multi}{C Preprocessor},
+		\href{https://github.com/craciunoiuc/oop-homework/tree/master/Version%20Control%20System}{Versioning system}
+	\end{flushleft}
+
+\section{Activities \& Certificates}
+	\begin{tabular}{rl}
+		\textsc{Jul.} 2020 & Security Summer School v7\\&
+			\textbullet\enspace\enspace Understood how to exploit binary files and how to avoid security flaws while programming.\\
+		\textsc{Feb.} 2020 & CISCO Networking Academy CCNA2 Certificate\\&
+			\textbullet\enspace\enspace Learned how to operate with Routers \& Switches, their protocols and, their features.\\
+	\end{tabular}
+
+\section{Personal Skills}
+	\begin{normalsize}
+		\textbf{Technical Skills}
+	\end{normalsize}
+	
+	\begin{tabular}{rl}
+		\textbullet \,\,\,\,\,\,\,\,\,\, Advanced Knowledge:& \textsc{Unix}-based systems, C/C++, Computer Networking, x86 Assembly, Git \\
+		\textbullet \, Intermediate Knowledge:& Java, OOP, Python, Algorithm Design \& Optimization, OpenGL\\
+		\textbullet \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\enspace Basic Knowledge:& \textsc{Bash} scripting, \LaTeX, Parallel Programming, CUDA, Haskell, C\#, Verilog\\
+	\end{tabular}\\
+	
+	\begin{tabular}{l|r}
+	
+		\begin{tabular}{rl}
+			\textbf{Soft Skills} &\\
+			\textbullet \enspace & Good team-based communication\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\\
+			\textbullet \enspace & Up to par response to pressure\\
+			\textbullet \enspace & Punctuality \& Dependability\\
+			\textsc{Other}:\enspace & Category B driver's license\\
+		\end{tabular}&\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,
+		
+		\begin{tabular}{rl}
+			\textbf{Languages} &\\
+			\textsc{Romanian:}&Mothertongue\\
+			\textsc{English:}&Fluent (CAE C2)\\
+			\textsc{French:}&Basic Knowledge\\
+			\textsc{German:}&Basic Knowledge\\
+		\end{tabular}
+	
+	\end{tabular}
+
+\section{Links}
+	\begin{tabular}{r@{\hskip 4cm}l}
+		\normalsize{Github profile: \url{https://bit.ly/2Zh700T}}&
+		\normalsize{Linkedin profile: \url{https://bit.ly/3sdQFGk}}
+		\\
+		\normalsize{Halite Challenge: \url{https://bit.ly/3332eW4}}&
+		\normalsize{Unikraft project: \url{https://bit.ly/35jQHEB}}
+	\end{tabular}
+\end{document}
