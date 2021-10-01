@@ -1,24 +1,22 @@
 \documentclass[a4paper,10pt]{article}
 
 \usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
-\RequirePackage{color,graphicx}
+\usepackage{fontspec}                         % for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip}     % other packages for formatting
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[big]{layaureo} 				%better formatting of the A4 page
-% an alternative to Layaureo can be ** \usepackage{fullpage} **
-\usepackage{supertabular} 				%for Grades
-\usepackage{titlesec}					%custom \section
+\usepackage[big]{layaureo}                    % better formatting of the A4 page
+\usepackage{supertabular}                     % for Grades
+\usepackage{titlesec}                         % custom \section
 \usepackage[]{geometry}
-%Setup hyperref package, and colours for links
 \usepackage{hyperref}
+
+\RequirePackage{color,graphicx}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
-%FONTS
+% FONTS
 \defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%% modified for Karol Kozioł for ShareLaTeX use
+
 \setmainfont[
 SmallCapsFont = Fontin-SmallCaps.otf,
 BoldFont = Fontin-Bold.otf,
@@ -27,147 +25,151 @@ ItalicFont = Fontin-Italic.otf
 {Fontin.otf}
 %%%
 
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
+% CV Sections inspired by: http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
-%Tweak a bit the top margin
-%\addtolength{\voffset}{-1.3cm}
 	\addtolength{\oddsidemargin}{-.875in}
 	\addtolength{\evensidemargin}{-.875in}
 	\addtolength{\textwidth}{1.75in}
-
 	\addtolength{\topmargin}{-.675in}
 	\addtolength{\textheight}{1.75in}
-%--------------------BEGIN DOCUMENT----------------------
+
+%--------------------BEGIN DOCUMENT--------------------
 \begin{document}
 
-\pagestyle{empty} % non-numbered pages
-\font\fb=''[cmr10]'' %for use with \LaTeX command
-
-%--------------------TITLE-------------
-\par{\centering
-		{\LARGE {Cezar \textsc{Cr\~{a}ciunoiu}}
-	}\bigskip\par}
-
-%--------------------SECTIONS-----------------------------------
-%Section: Personal Data
-\section{Personal Information}
-
-\begin{tabular}{rl}
-    \textsc{Address:}   & Oituz 9, 200494, Craiova, Romania \\
-    \textsc{Phone:}     & (+40) 733 977 745\\
-    \textsc{email:}     & \href{mailto:cezar.craciunoiu@gmail.com}{cezar.craciunoiu@gmail.com}
-\end{tabular}
+\pagestyle{empty}    % non-numbered pages
+\font\fb=''[cmr10]'' % for use with \LaTeX command
 
 
+%--------------------BEGIN DOCUMENT--------------------
+\begin{tabular}{lr}
+    \footnotesize{Oituz 9, 200494, Craiova, Romania \hspace{230pt}} & \footnotesize{Github profile: \url{https://bit.ly/2Zh700T}} \\
+    \footnotesize{(+40) 733 977 745} & \footnotesize{Linkedin profile: \url{https://bit.ly/3sdQFGk}} \\
+    \footnotesize{\href{mailto:cezar.craciunoiu@gmail.com}{cezar.craciunoiu@gmail.com}} & \footnotesize{TODO: \url{https://bit.ly/TODOTOD}} \\
+\end{tabular}		
+
+%--------------------TITLE-----------------------------
+\par{\centering{\LARGE {Cezar \textsc{Cr\~{a}ciunoiu}}}\bigskip\par}
+
+%--------------------SECTIONS--------------------------
 %Section: Education
 \section{Education}
 \begin{tabular}{rl}	
-\textsc{Sept.} 2017-\textsc{Present}& Bachelor's Degree in \textsc{Computer Science}, GPA: 3.67/4 \scriptsize{as of now}\\&
-\normalsize\textbf{Politehnica University of Bucharest}, Bucharest (Romania)\\&
-\footnotesize{Notable Courses: Data Structures, Network Protocols, OOP,
-				 Algorithm Design, Parallel Programming} \\& \footnotesize{Computer Graphics, Programming Paradigms,
-				 Operating Systems, Computer Architecture}
+	\textsc{Sept.} 2021-\textsc{Present}& Masters Degree in \textsc{Computer Science}, Advanced Cybersecurity \\&
+	\normalsize\textbf{Politehnica University of Bucharest}, Bucharest (Romania) \\&
+	\footnotesize{Entry grade: 8.94/10}
+\end{tabular}
+
+\begin{tabular}{rl}	
+	\textsc{Sept.} 2017-\textsc{Jul.}2021& Bachelor's Degree in \textsc{Computer Science}, GPA: 3.7/4 \\&
+	\normalsize\textbf{Politehnica University of Bucharest}, Bucharest (Romania)\\&
+	\footnotesize{Notable Courses: Data Structures, Network Protocols, OOP, Algorithm Design, Parallel Programming} \\&
+	\footnotesize{Computer Graphics, Programming Paradigms, Operating Systems, Computer Architecture}
 \end{tabular}
 
 %Section: Work Experience at the top
 \section{Work Experience}
-	\begin{tabular}{r|p{11cm}}
-	
-		 \textsc{Aug. 2020} & Performance Testing Engineer Intern at \textsc{Endava}, Bucharest \\
-		\textsc{Jul. 2020}&\emph{Graduates 2020 Internship Programme}\\&
-		\footnotesize{Participated in a month long training programme. Learned about and applied different testing techniques.
-			Understood software development \& testing phases in an agile enviroment. Worked in the last week on a company project.}
-		\\\multicolumn{2}{c}{} \\
-		
-		\textsc{Aug. 2020} & Undergraduate teaching assistant at \textsc{UPB}, Bucharest \\
-		\textsc{Sept. 2019}&\emph{Introduction to computer architecture \& Assembly Language}\\&
-		\footnotesize{Helped in the creation of tests given to students across the semester. Participated in the grading of the aforementioned tests.
-			Took the role of invigilator during the final exam. Coordinated with the team leader to deliver results.}
-		\\\multicolumn{2}{c}{} \\
-	
-	\end{tabular}
+\begin{tabular}{r|p{11cm}}
+	\textsc{Present} & Graduate Teaching Assistant at \textsc{UPB}, Bucharest \\
+	\textsc{Sept. 2019} & \emph{2021-Present | Performance Evaluation} \\&
+	\emph{2021-Present | Operating Systems} \\&
+	\emph{2019-2020 | Introduction to computer architecture \& Assembly Language} \\&
+	\footnotesize
+	{
+		Held laboratory sessions with students.
+		Wrote and maintained laboratory content.
+		Helped in test creation and grading.
+	} \\
+	\multicolumn{2}{c}{} \\
 
-%Section: Scholarships and additional info
+	\textsc{Sep. 2021} & Java Software Developer Intern at \textsc{Thales}, Bucharest \\
+	\textsc{Jul. 2021} & \emph{Thales Alenia Space Departament}\\&
+	\footnotesize
+	{
+		Worked to develop a web-tool with Java EE to assess and evaluate
+		the performance and happiness of employees through recurring forms.
+		Communicated with several team members to deliver the application
+		with the needed specifications.
+	} \\
+	\multicolumn{2}{c}{} \\
+
+	\textsc{Aug. 2020} & Performance Testing Engineer Intern at \textsc{Endava}, Bucharest \\
+	\textsc{Jul. 2020}&\emph{Graduates 2020 Internship Programme}\\&
+	\footnotesize
+	{
+		Participated in a month long training programme.
+		Learned about and applied different testing techniques.
+		Understood software development \& testing phases in an agile enviroment.
+		Worked in the last week on a company project.
+	} \\
+	\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section: Additional info
 \section{Projects}
-	\begin{flushleft}
-		\textbf{Unikraft Projects - C open-source development}
-	\end{flushleft}
-	\begin{tabular}{ll}
-		\textbullet\enspace\enspace Implemented a memory ballooning driver from existing patches and submitted them
-				\\\enspace\enspace\enspace  through the Linux kernel patch \href{https://patchwork.unikraft.org/project/unikraft/list/?series=1532}{submission system}.\\
-		\textbullet\enspace\enspace Ported the \href{https://github.com/cs-pub-ro/unikraft-p11-kit}{P11-kit library} to Unikraft \& reviewed different sets of patches for other libraries.\\
-		\textbullet\enspace\enspace Currently working on porting the Prometheus library to Unikraft to bring about an easier
-				\\\enspace\enspace\enspace method of exporting performance statistics.\\
-	\end{tabular}
+\begin{flushleft}
+	\textbf{Unikraft Projects - C open-source development}
+\end{flushleft}
+\begin{tabular}{ll}
+	\textbullet\enspace\enspace Implemented a memory ballooning driver from existing patches and submitted them \\
+	\enspace\enspace\enspace    through the Linux kernel patch \href{https://patchwork.unikraft.org/project/unikraft/list/?series=1532}{submission system}. \\
+	\textbullet\enspace\enspace Ported the \href{https://github.com/cs-pub-ro/unikraft-p11-kit}{P11-kit library} to Unikraft \& reviewed different sets of patches for other libraries. \\
+	\textbullet\enspace\enspace Currently working on porting the Prometheus library to Unikraft to bring about an easier \\
+	\enspace\enspace\enspace    method of exporting performance statistics.
+\end{tabular}
 
-	\begin{flushleft}
-		\textbf{Parallel Image Filters - C++ team project}
-	\end{flushleft}
-	\begin{tabular}{ll}
-		\textbullet\enspace\enspace Implemented 10 different PNG image filters through 3 different parallelization methods.\\
-		\textbullet\enspace\enspace Understood how the Canny edge detector works and its implementation.\\
-		\textbullet\enspace\enspace Earned a good understanding in parallelization performance analysis \& optimization.\\
-		\textbullet\enspace\enspace Further developed project structuring skills using the \href{https://github.com/craciunoiuc/parallel-architectures}{Git versioning system}.\\
-	\end{tabular}
+\begin{flushleft}
+\textbf{Other notable projects:} 
+	\href{https://github.com/craciunoiuc/Halite-III}{Halite III},
+	\href{https://github.com/craciunoiuc/computer-graphics-2}{3D Ray Tracing},
+	\href{https://github.com/craciunoiuc/network-protocols/tree/master/Client%20-%20Server}{Client-Server IM},
+	\href{https://github.com/craciunoiuc/computer-graphics/tree/master/Source/Teme/Flying%203D%20Plane}{Flying 3D Plane},
+	\href{https://github.com/craciunoiuc/operating-systems/tree/master/1-multi}{C Preprocessor},
+	\href{https://github.com/craciunoiuc/oop-homework/tree/master/Version%20Control%20System}{Versioning system}
+\end{flushleft}
 
-	\begin{flushleft}
-	\textbf{Other notable projects:} 
-		\href{https://github.com/craciunoiuc/Halite-III}{Halite III},
-		\href{https://github.com/craciunoiuc/computer-graphics-2}{3D Ray Tracing},
-		\href{https://github.com/craciunoiuc/network-protocols/tree/master/Client%20-%20Server}{Client-Server IM},
-		\href{https://github.com/craciunoiuc/computer-graphics/tree/master/Source/Teme/Flying%203D%20Plane}{Flying 3D Plane},
-		\href{https://github.com/craciunoiuc/operating-systems/tree/master/1-multi}{C Preprocessor},
-		\href{https://github.com/craciunoiuc/oop-homework/tree/master/Version%20Control%20System}{Versioning system}
-	\end{flushleft}
-
+% Section: extra activities
 \section{Activities \& Certificates}
-	\begin{tabular}{rl}
-		\textsc{Jul.} 2020 & Security Summer School v7\\&
-			\textbullet\enspace\enspace Understood how to exploit binary files and how to avoid security flaws while programming.\\&
-			\textbullet\enspace\enspace Participated in two day-long hackathons.\\
-		\textsc{Feb.} 2020 & CISCO Networking Academy CCNA2 Certificate\\&
-			\textbullet\enspace\enspace Learned how to operate with Routers \& Switches, their protocols and, their features.\\
-	\end{tabular}
+\begin{tabular}{rl}
+	\textsc{Jul.} 2020 & Security Summer School v7 \\&
+		\textbullet\enspace\enspace Understood how to exploit binary files and how to avoid security flaws while programming. \\&
+		\textbullet\enspace\enspace Participated in two day-long hackathons. \\
+	\textsc{Feb.} 2020 & CISCO Networking Academy CCNA2 Certificate \\&
+		\textbullet\enspace\enspace Learned how to operate with Routers \& Switches, their protocols and, their features.
+\end{tabular}
 
+% Section: skills
 \section{Personal Skills}
-	\begin{normalsize}
-		\textbf{Technical Skills}
-	\end{normalsize}
+\begin{normalsize}
+	\textbf{Technical Skills}
+\end{normalsize}
+
+\begin{tabular}{rl}
+	\textbullet \,\,\,\,\,\,\,\,\,\, Advanced Knowledge: & \textsc{Unix}-based systems, C/C++, Computer Networking, x86 Assembly, Git \\
+	\textbullet \, Intermediate Knowledge: & Java, OOP, Python, Kernel Programming, Algorithm Design \& Optimization \\
+	\textbullet \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\enspace Basic Knowledge: & \textsc{Bash} scripting, \LaTeX, Parallel Programming, CUDA, Haskell, C\#, Verilog
+\end{tabular}
+
+\begin{tabular}{l|r}
+
+	\begin{tabular}{rl}
+		\textbf{Soft Skills} & \\
+		\textbullet \enspace & Good team-based communication\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\\
+		\textbullet \enspace & Up to par response to pressure \\
+		\textbullet \enspace & Punctuality \& Dependability \\
+		\textsc{Other}:\enspace & Category B driver's license
+	\end{tabular}
+	
+	&\hspace{40pt}
 	
 	\begin{tabular}{rl}
-		\textbullet \,\,\,\,\,\,\,\,\,\, Advanced Knowledge:& \textsc{Unix}-based systems, C/C++, Computer Networking, x86 Assembly, Git \\
-		\textbullet \, Intermediate Knowledge:& Java, OOP, Python, Algorithm Design \& Optimization, OpenGL\\
-		\textbullet \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\enspace Basic Knowledge:& \textsc{Bash} scripting, \LaTeX, Parallel Programming, CUDA, Haskell, C\#, Verilog\\
-	\end{tabular}\\
-	
-	\begin{tabular}{l|r}
-	
-		\begin{tabular}{rl}
-			\textbf{Soft Skills} &\\
-			\textbullet \enspace & Good team-based communication\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\\
-			\textbullet \enspace & Up to par response to pressure\\
-			\textbullet \enspace & Punctuality \& Dependability\\
-			\textsc{Other}:\enspace & Category B driver's license\\
-		\end{tabular}&\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,
-		
-		\begin{tabular}{rl}
-			\textbf{Languages} &\\
-			\textsc{Romanian:}&Mothertongue\\
-			\textsc{English:}&Fluent (CAE C2)\\
-			\textsc{French:}&Basic Knowledge\\
-			\textsc{German:}&Basic Knowledge\\
-		\end{tabular}
-	
+		\textbf{Languages} & \\
+		\textsc{Romanian:} & Mothertongue \\
+		\textsc{English:} & Fluent (CAE C2) \\
+		\textsc{French:} & Basic Knowledge \\
+		\textsc{German:} & Basic Knowledge
 	\end{tabular}
 
-\section{Links}
-	\begin{tabular}{r@{\hskip 4cm}l}
-		\normalsize{Github profile: \url{https://bit.ly/2Zh700T}}&
-		\normalsize{Linkedin profile: \url{https://bit.ly/3sdQFGk}}
-		\\
-		\normalsize{Halite Challenge: \url{https://bit.ly/3332eW4}}&
-		\normalsize{Unikraft project: \url{https://bit.ly/35jQHEB}}
-	\end{tabular}
+\end{tabular}
+
 \end{document}
